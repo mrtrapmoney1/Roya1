@@ -13,112 +13,258 @@
 
         body {
             font-family: 'Times New Roman', serif;
-            background-color: #F5F5F5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 30px;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 42pt;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 20pt;
+            opacity: 0.95;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            font-size: 36pt;
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28pt;
             color: #003366;
-            text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
             font-weight: bold;
+            border-left: 8px solid #003366;
+            padding-left: 20px;
+            letter-spacing: 0.5px;
         }
 
         .button-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .service-button {
-            height: 100px;
-            min-width: 250px;
+            min-height: 90px;
+            min-width: 280px;
             font-size: 20pt;
             font-family: 'Times New Roman', serif;
             font-weight: bold;
             background-color: #003366;
             color: white;
-            border: none;
-            border-radius: 8px;
+            border: 3px solid #003366;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.2s;
-            padding: 20px;
+            transition: all 0.3s ease;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .service-button:hover {
             background-color: #0066CC;
+            border-color: #0066CC;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
         }
 
         .service-button:active {
             background-color: #002244;
+            transform: translateY(-2px);
         }
 
-        .section-title {
-            font-size: 24pt;
+        .service-button.secondary {
+            background-color: white;
+            color: #003366;
+            border: 3px solid #003366;
+        }
+
+        .service-button.secondary:hover {
+            background-color: #003366;
+            color: white;
+        }
+
+        .service-button.warning {
+            background-color: #E65100;
+            border-color: #E65100;
+        }
+
+        .service-button.warning:hover {
+            background-color: #FF6F00;
+            border-color: #FF6F00;
+        }
+
+        .service-button.success {
+            background-color: #2D5016;
+            border-color: #2D5016;
+        }
+
+        .service-button.success:hover {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        .info-banner {
+            background-color: #E3F2FD;
+            border-left: 6px solid #0066CC;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .info-banner p {
+            font-size: 18pt;
             color: #212121;
-            margin-top: 50px;
-            margin-bottom: 30px;
-            font-weight: bold;
-            border-bottom: 3px solid #003366;
-            padding-bottom: 10px;
+            margin: 0;
         }
 
         .footer {
             text-align: center;
-            margin-top: 60px;
-            font-size: 14pt;
-            color: #666;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            font-size: 16pt;
+            color: #212121;
+            margin: 8px 0;
+        }
+
+        .footer .version {
+            font-weight: bold;
+            color: #003366;
+        }
+
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .quick-link {
+            font-size: 16pt;
+            color: #0066CC;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .quick-link:hover {
+            background-color: #E3F2FD;
+        }
+
+        @media (max-width: 768px) {
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Metro TV & Appliances</h1>
-        <p style="text-align: center; font-size: 18pt; color: #212121; margin-bottom: 20px;">
-            Service Portal Dashboard
-        </p>
-
-        <h2 class="section-title">Service Management Systems</h2>
-        <div class="button-grid">
-            <button class="service-button" onclick="window.open('https://servicepower.com', '_blank')">
-                ServicePower
-            </button>
-            <button class="service-button" onclick="window.open('https://servicebench.com', '_blank')">
-                ServiceBench
-            </button>
-            <button class="service-button" onclick="window.open('https://newleaf.com', '_blank')">
-                New Leaf
-            </button>
-            <button class="service-button" onclick="window.open('https://samsung.com', '_blank')">
-                Samsung
-            </button>
+        <div class="header">
+            <h1>METRO TV & APPLIANCES</h1>
+            <p>Technician Service Portal</p>
         </div>
 
-        <h2 class="section-title">Additional Services</h2>
-        <div class="button-grid">
-            <button class="service-button" onclick="alert('Claims portal coming soon')">
-                Claims
-            </button>
-            <button class="service-button" onclick="alert('GE Appliance Ordering coming soon')">
-                GE Appliance Ordering
-            </button>
+        <div class="info-banner">
+            <p><strong>Welcome!</strong> Select a service below to get started. All links open in new windows.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Service Management Systems</h2>
+            <div class="button-grid">
+                <button class="service-button" onclick="window.open('https://www.servicepower.com', '_blank')">
+                    ServicePower
+                </button>
+                <button class="service-button" onclick="window.open('https://www.servicebench.com', '_blank')">
+                    ServiceBench
+                </button>
+                <button class="service-button" onclick="window.open('https://www.newleafsp.com', '_blank')">
+                    New Leaf
+                </button>
+                <button class="service-button" onclick="window.open('https://www.samsung.com/us/support/', '_blank')">
+                    Samsung Support
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Parts & Ordering</h2>
+            <div class="button-grid">
+                <button class="service-button success" onclick="alert('GE Appliance Parts ordering system coming soon. Contact supervisor for current ordering process.')">
+                    GE Appliance Ordering
+                </button>
+                <button class="service-button secondary" onclick="alert('Parts lookup system coming soon.')">
+                    Parts Lookup
+                </button>
+                <button class="service-button secondary" onclick="alert('Inventory management coming soon.')">
+                    Inventory Management
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Claims & Administration</h2>
+            <div class="button-grid">
+                <button class="service-button warning" onclick="alert('Claims portal coming soon. Please use current claims process.')">
+                    Submit Claims
+                </button>
+                <button class="service-button secondary" onclick="alert('Timesheet system coming soon.')">
+                    Timesheets
+                </button>
+                <button class="service-button secondary" onclick="alert('Schedule viewer coming soon.')">
+                    My Schedule
+                </button>
+                <button class="service-button secondary" onclick="alert('Documentation portal coming soon.')">
+                    Documentation
+                </button>
+            </div>
         </div>
 
         <div class="footer">
-            <p>Metro TV & Appliances Service Portal v1.0</p>
-            <p style="margin-top: 10px;">For assistance, contact your supervisor</p>
+            <p class="version">Metro TV & Appliances Service Portal v1.0</p>
+            <p>Last Updated: December 2024</p>
+            <div class="quick-links">
+                <a href="#" class="quick-link" onclick="alert('Help documentation coming soon.'); return false;">Help & Support</a>
+                <a href="#" class="quick-link" onclick="alert('Contact your supervisor for assistance.'); return false;">Contact Supervisor</a>
+                <a href="#" class="quick-link" onclick="alert('Training materials coming soon.'); return false;">Training Resources</a>
+            </div>
         </div>
     </div>
 </body>
