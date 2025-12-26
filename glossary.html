@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Glossary - Metro TV & Appliances</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            color: #000000;
+            background-color: #F5F0E8;
+            min-height: 100vh;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #B71C1C;
+            color: #FFFFFF;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            font-size: 42pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .header p {
+            font-size: 20pt;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 15px 30px;
+            background-color: #B71C1C;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16pt;
+            font-family: 'Times New Roman', serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:hover {
+            background-color: #8B0000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .glossary-card {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .glossary-title {
+            font-size: 32pt;
+            color: #000000;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+            border-bottom: 4px solid #B71C1C;
+            padding-bottom: 15px;
+        }
+
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .glossary-item {
+            padding: 20px;
+            background-color: #FAF7F2;
+            border-left: 4px solid #B71C1C;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .glossary-item:hover {
+            background-color: #F5F0E8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .glossary-term {
+            font-size: 20pt;
+            color: #B71C1C;
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .glossary-description {
+            font-size: 16pt;
+            color: #000000;
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+        }
+
+        .glossary-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #B71C1C;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14pt;
+        }
+
+        .glossary-link:hover {
+            text-decoration: underline;
+        }
+
+        .info-banner {
+            background-color: #FFF3E0;
+            border-left: 6px solid #B71C1C;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .info-banner p {
+            font-size: 18pt;
+            color: #000000;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            font-size: 16pt;
+            color: #000000;
+            font-family: 'Times New Roman', serif;
+            margin: 8px 0;
+        }
+
+        .footer .version {
+            font-weight: bold;
+            color: #B71C1C;
+        }
+
+        @media (max-width: 1024px) {
+            .glossary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>METRO TV & APPLIANCES</h1>
+            <p>Platform Glossary</p>
+        </div>
+
+        <!-- Back Link -->
+        <a href="index.html" class="back-link">← Back to Service Portal</a>
+
+        <!-- Info Banner -->
+        <div class="info-banner">
+            <p><strong>Platform Glossary:</strong> Click any platform box below to visit that service. All platforms are listed alphabetically for easy reference.</p>
+        </div>
+
+        <!-- Glossary -->
+        <div class="glossary-card">
+            <h2 class="glossary-title">All Platforms & Services (A-Z)</h2>
+
+            <div class="glossary-grid">
+                <!-- Encompass Supply Chain -->
+                <div class="glossary-item" onclick="window.open('https://encompass.com/account', '_blank')">
+                    <span class="glossary-term">Encompass Supply Chain</span>
+                    <p class="glossary-description">Comprehensive parts ordering platform for multiple appliance brands. Order parts, view schematics, check cross-references, and manage your account.</p>
+                    <a href="https://encompass.com/account" target="_blank" class="glossary-link">Visit Platform →</a>
+                </div>
+
+                <!-- GE Parts Ordering -->
+                <div class="glossary-item" onclick="window.open('https://geappliancescustomernet.com/login', '_blank')">
+                    <span class="glossary-term">GE Parts Ordering</span>
+                    <p class="glossary-description">GE Appliances official parts ordering system. Order genuine GE replacement parts, check inventory availability, and track shipments.</p>
+                    <a href="https://geappliancescustomernet.com/login" target="_blank" class="glossary-link">Visit Platform →</a>
+                </div>
+
+                <!-- Marcone -->
+                <div class="glossary-item" onclick="window.open('https://my.marcone.com/UserLogin?_gl=1*feydsn*_gcl_au*NTM2OTE0NTYzLjE3NjY3Nzk4Nzg.', '_blank')">
+                    <span class="glossary-term">Marcone</span>
+                    <p class="glossary-description">Multi-brand appliance parts supplier. Provides OEM and aftermarket parts for all major appliance brands with same-day pickup options at local branches.</p>
+                    <a href="https://my.marcone.com/UserLogin?_gl=1*feydsn*_gcl_au*NTM2OTE0NTYzLjE3NjY3Nzk4Nzg." target="_blank" class="glossary-link">Visit Platform →</a>
+                </div>
+
+                <!-- New Leaf -->
+                <div class="glossary-item" onclick="window.open('https://newleaf-crm.csgfsm.com/', '_blank')">
+                    <span class="glossary-term">New Leaf</span>
+                    <p class="glossary-description">Extended warranty service platform. Manages warranty claims, service requests, and customer information for extended protection plans.</p>
+                    <a href="https://newleaf-crm.csgfsm.com/" target="_blank" class="glossary-link">Visit Platform →</a>
+                </div>
+
+                <!-- Samsung GSPN -->
+                <div class="glossary-item" onclick="window.open('https://gspn3.samsungcsportal.com/index.jsp', '_blank')">
+                    <span class="glossary-term">Samsung GSPN</span>
+                    <p class="glossary-description">Samsung Global Service Partner Network portal. Used for Samsung-specific service tickets, parts ordering, and warranty claim submissions.</p>
+                    <a href="https://gspn3.samsungcsportal.com/index.jsp" target="_blank" class="glossary-link">Visit Platform →</a>
+                </div>
+
+                <!-- ServicePower -->
+                <div class="glossary-item" onclick="window.open('https://hub.servicepower.com/', '_blank')">
+                    <span class="glossary-term">ServicePower</span>
+                    <p class="glossary-description">Primary service ticket management system. Used for scheduling, dispatching, and tracking all service calls from major appliance manufacturers and retailers.</p>
+                    <a href="https://hub.servicepower.com/" target="_blank" class="glossary-link">Visit Platform →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="version">Metro TV & Appliances Service Portal v1.2</p>
+            <p>Last Updated: December 2024</p>
+            <p style="font-size: 14pt; margin-top: 15px;">For assistance, contact your supervisor or IT support.</p>
+        </div>
+    </div>
+</body>
+</html>
