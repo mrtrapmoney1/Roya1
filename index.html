@@ -47,82 +47,12 @@
             margin: 0 auto;
         }
 
-        .glossary-card {
-            background-color: #FFFFFF;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-
-        .glossary-title {
-            font-size: 32pt;
-            color: #000000;
-            margin-bottom: 30px;
-            font-weight: bold;
-            font-family: 'Times New Roman', serif;
-            border-bottom: 4px solid #B71C1C;
-            padding-bottom: 15px;
-        }
-
-        .glossary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .glossary-item {
-            padding: 15px;
-            background-color: #FAF7F2;
-            border-left: 4px solid #B71C1C;
-            border-radius: 4px;
-        }
-
-        .glossary-link {
-            font-size: 18pt;
-            color: #B71C1C;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Times New Roman', serif;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .glossary-link:hover {
-            text-decoration: underline;
-        }
-
-        .glossary-description {
-            font-size: 16pt;
-            color: #000000;
-            font-family: 'Times New Roman', serif;
-            line-height: 1.6;
-        }
-
         .section-card {
             background-color: #FFFFFF;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 40px;
-            scroll-margin-top: 20px;
-        }
-
-        .section-card.highlight {
-            animation: flashHighlight 2s ease-in-out;
-        }
-
-        @keyframes flashHighlight {
-            0%, 100% {
-                background-color: #FFFFFF;
-            }
-            25%, 75% {
-                background-color: #FFE082;
-            }
-            50% {
-                background-color: #FFD54F;
-            }
         }
 
         .section-title {
@@ -137,13 +67,12 @@
 
         .button-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .service-button {
-            min-height: 80px;
-            min-width: 200px;
+            min-height: 120px;
             font-size: 18pt;
             font-family: 'Times New Roman', serif;
             font-weight: normal;
@@ -172,13 +101,19 @@
             transform: translateY(0);
         }
 
-        .service-button.secondary {
+        .glossary-link-button {
             background-color: #FFFFFF;
-            color: #000000;
+            color: #B71C1C;
             border: 2px solid #B71C1C;
+            min-height: 80px;
+            font-size: 16pt;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .service-button.secondary:hover {
+        .glossary-link-button:hover {
             background-color: #FAF7F2;
         }
 
@@ -218,11 +153,14 @@
             color: #B71C1C;
         }
 
+        @media (max-width: 1024px) {
+            .button-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .button-grid {
-                grid-template-columns: 1fr;
-            }
-            .glossary-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -238,63 +176,19 @@
 
         <!-- Info Banner -->
         <div class="info-banner">
-            <p><strong>Welcome!</strong> Select a service below to get started. All links open in new windows. Use the glossary to quickly navigate to any platform.</p>
-        </div>
-
-        <!-- Glossary/Index -->
-        <div class="glossary-card">
-            <h2 class="glossary-title">Platform Glossary & Quick Navigation</h2>
-
-            <div class="glossary-grid">
-                <div class="glossary-item">
-                    <a href="#servicepower" class="glossary-link" onclick="highlightSection('servicepower'); return true;">ServicePower</a>
-                    <p class="glossary-description">Primary service ticket management system. Used for scheduling, dispatching, and tracking all service calls from major appliance manufacturers and retailers.</p>
-                </div>
-
-                <div class="glossary-item">
-                    <a href="#newleaf" class="glossary-link" onclick="highlightSection('newleaf'); return true;">New Leaf</a>
-                    <p class="glossary-description">Extended warranty service platform. Manages warranty claims, service requests, and customer information for extended protection plans.</p>
-                </div>
-
-                <div class="glossary-item">
-                    <a href="#samsung" class="glossary-link" onclick="highlightSection('samsung'); return true;">Samsung GSPN</a>
-                    <p class="glossary-description">Samsung Global Service Partner Network portal. Used for Samsung-specific service tickets, parts ordering, and warranty claim submissions.</p>
-                </div>
-
-                <div class="glossary-item">
-                    <a href="#ge-parts" class="glossary-link" onclick="highlightSection('ge-parts'); return true;">GE Parts Ordering</a>
-                    <p class="glossary-description">GE Appliances official parts ordering system. Order genuine GE replacement parts, check inventory availability, and track shipments.</p>
-                </div>
-
-                <div class="glossary-item">
-                    <a href="#marcone" class="glossary-link" onclick="highlightSection('marcone'); return true;">Marcone</a>
-                    <p class="glossary-description">Multi-brand appliance parts supplier. Provides OEM and aftermarket parts for all major appliance brands with same-day pickup options at local branches.</p>
-                </div>
-
-                <div class="glossary-item">
-                    <a href="#encompass" class="glossary-link" onclick="highlightSection('encompass'); return true;">Encompass Supply Chain</a>
-                    <p class="glossary-description">Comprehensive parts ordering platform for multiple appliance brands. Order parts, view schematics, check cross-references, and manage your account.</p>
-                </div>
-            </div>
+            <p><strong>Welcome!</strong> Select a service below to get started. All links open in new windows. Visit the <a href="glossary.html" style="color: #B71C1C; font-weight: bold;">Platform Glossary</a> for detailed information.</p>
         </div>
 
         <!-- Platforms Section -->
-        <div class="section-card" id="platforms-section">
+        <div class="section-card">
             <h2 class="section-title">PLATFORMS</h2>
-
-            <div id="servicepower" class="button-grid" style="margin-bottom: 40px;">
+            <div class="button-grid">
                 <button class="service-button" onclick="window.open('https://hub.servicepower.com/', '_blank')">
                     ServicePower
                 </button>
-            </div>
-
-            <div id="newleaf" class="button-grid" style="margin-bottom: 40px;">
                 <button class="service-button" onclick="window.open('https://newleaf-crm.csgfsm.com/', '_blank')">
                     New Leaf
                 </button>
-            </div>
-
-            <div id="samsung" class="button-grid">
                 <button class="service-button" onclick="window.open('https://gspn3.samsungcsportal.com/index.jsp', '_blank')">
                     Samsung GSPN
                 </button>
@@ -302,71 +196,37 @@
         </div>
 
         <!-- Parts Section -->
-        <div class="section-card" id="parts-section">
+        <div class="section-card">
             <h2 class="section-title">PARTS</h2>
-
-            <div id="ge-parts" class="button-grid" style="margin-bottom: 40px;">
+            <div class="button-grid">
                 <button class="service-button" onclick="window.open('https://geappliancescustomernet.com/login', '_blank')">
                     GE Parts Ordering
                 </button>
-            </div>
-
-            <div id="marcone" class="button-grid" style="margin-bottom: 40px;">
-                <button class="service-button" onclick="window.open('https://www.marcone.com/', '_blank')">
+                <button class="service-button" onclick="window.open('https://my.marcone.com/UserLogin?_gl=1*feydsn*_gcl_au*NTM2OTE0NTYzLjE3NjY3Nzk4Nzg.', '_blank')">
                     Marcone
                 </button>
-            </div>
-
-            <div id="encompass" class="button-grid">
-                <button class="service-button" onclick="window.open('https://www.encompass.com/', '_blank')">
+                <button class="service-button" onclick="window.open('https://encompass.com/account', '_blank')">
                     Encompass Supply Chain
                 </button>
             </div>
         </div>
 
-        <!-- Claims Section -->
-        <div class="section-card" id="claims-section">
-            <h2 class="section-title">CLAIMS</h2>
+        <!-- Quick Link to Glossary -->
+        <div class="section-card">
+            <h2 class="section-title">RESOURCES</h2>
             <div class="button-grid">
-                <button class="service-button secondary" onclick="alert('Claims portal coming soon. Please use current claims submission process through ServicePower or contact your supervisor.')">
-                    Submit Claims
-                </button>
-                <button class="service-button secondary" onclick="alert('Warranty lookup system coming soon.')">
-                    Warranty Lookup
-                </button>
+                <a href="glossary.html" class="service-button glossary-link-button">
+                    Platform Glossary
+                </a>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <p class="version">Metro TV & Appliances Service Portal v1.1</p>
+            <p class="version">Metro TV & Appliances Service Portal v1.2</p>
             <p>Last Updated: December 2024</p>
             <p style="font-size: 14pt; margin-top: 15px;">For assistance, contact your supervisor or IT support.</p>
         </div>
     </div>
-
-    <script>
-        function highlightSection(sectionId) {
-            // Remove highlight from all sections
-            document.querySelectorAll('.section-card').forEach(card => {
-                card.classList.remove('highlight');
-            });
-
-            // Find the parent section card of the clicked item
-            const element = document.getElementById(sectionId);
-            if (element) {
-                const parentCard = element.closest('.section-card');
-                if (parentCard) {
-                    // Add highlight animation
-                    parentCard.classList.add('highlight');
-
-                    // Remove highlight after animation completes
-                    setTimeout(() => {
-                        parentCard.classList.remove('highlight');
-                    }, 2000);
-                }
-            }
-        }
-    </script>
 </body>
 </html>
