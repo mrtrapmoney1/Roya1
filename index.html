@@ -13,32 +13,33 @@
 
         body {
             font-family: 'Times New Roman', serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #000000;
+            background-color: #F5F0E8;
             min-height: 100vh;
             padding: 30px;
             line-height: 1.6;
         }
 
         .header {
-            background-color: #003366;
-            color: white;
+            background-color: #B71C1C;
+            color: #FFFFFF;
             padding: 30px;
             text-align: center;
-            border-radius: 12px;
+            border-radius: 8px;
             margin-bottom: 40px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .header h1 {
             font-size: 42pt;
             font-weight: bold;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', serif;
         }
 
         .header p {
             font-size: 20pt;
-            opacity: 0.95;
+            font-family: 'Times New Roman', serif;
         }
 
         .container {
@@ -46,22 +47,92 @@
             margin: 0 auto;
         }
 
-        .card {
-            background-color: white;
+        .glossary-card {
+            background-color: #FFFFFF;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 40px;
+        }
+
+        .glossary-title {
+            font-size: 32pt;
+            color: #000000;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+            border-bottom: 4px solid #B71C1C;
+            padding-bottom: 15px;
+        }
+
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .glossary-item {
+            padding: 15px;
+            background-color: #FAF7F2;
+            border-left: 4px solid #B71C1C;
+            border-radius: 4px;
+        }
+
+        .glossary-link {
+            font-size: 18pt;
+            color: #B71C1C;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .glossary-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossary-description {
+            font-size: 16pt;
+            color: #000000;
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+        }
+
+        .section-card {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            scroll-margin-top: 20px;
+        }
+
+        .section-card.highlight {
+            animation: flashHighlight 2s ease-in-out;
+        }
+
+        @keyframes flashHighlight {
+            0%, 100% {
+                background-color: #FFFFFF;
+            }
+            25%, 75% {
+                background-color: #FFE082;
+            }
+            50% {
+                background-color: #FFD54F;
+            }
         }
 
         .section-title {
             font-size: 28pt;
-            color: #003366;
-            margin-bottom: 35px;
+            color: #000000;
+            margin-bottom: 30px;
             font-weight: bold;
-            border-left: 8px solid #003366;
-            padding-left: 20px;
-            letter-spacing: 0.5px;
+            font-family: 'Times New Roman', serif;
+            border-bottom: 3px solid #B71C1C;
+            padding-bottom: 10px;
         }
 
         .button-grid {
@@ -71,19 +142,19 @@
         }
 
         .service-button {
-            min-height: 90px;
-            min-width: 280px;
-            font-size: 20pt;
+            min-height: 80px;
+            min-width: 200px;
+            font-size: 18pt;
             font-family: 'Times New Roman', serif;
-            font-weight: bold;
-            background-color: #003366;
-            color: white;
-            border: 3px solid #003366;
-            border-radius: 10px;
+            font-weight: normal;
+            background-color: #B71C1C;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             display: flex;
             align-items: center;
@@ -91,59 +162,38 @@
         }
 
         .service-button:hover {
-            background-color: #0066CC;
-            border-color: #0066CC;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+            background-color: #8B0000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .service-button:active {
-            background-color: #002244;
-            transform: translateY(-2px);
+            background-color: #6D0000;
+            transform: translateY(0);
         }
 
         .service-button.secondary {
-            background-color: white;
-            color: #003366;
-            border: 3px solid #003366;
+            background-color: #FFFFFF;
+            color: #000000;
+            border: 2px solid #B71C1C;
         }
 
         .service-button.secondary:hover {
-            background-color: #003366;
-            color: white;
-        }
-
-        .service-button.warning {
-            background-color: #E65100;
-            border-color: #E65100;
-        }
-
-        .service-button.warning:hover {
-            background-color: #FF6F00;
-            border-color: #FF6F00;
-        }
-
-        .service-button.success {
-            background-color: #2D5016;
-            border-color: #2D5016;
-        }
-
-        .service-button.success:hover {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
+            background-color: #FAF7F2;
         }
 
         .info-banner {
-            background-color: #E3F2FD;
-            border-left: 6px solid #0066CC;
+            background-color: #FFF3E0;
+            border-left: 6px solid #B71C1C;
             padding: 25px;
             margin-bottom: 40px;
-            border-radius: 8px;
+            border-radius: 4px;
         }
 
         .info-banner p {
             font-size: 18pt;
-            color: #212121;
+            color: #000000;
+            font-family: 'Times New Roman', serif;
             margin: 0;
         }
 
@@ -151,45 +201,28 @@
             text-align: center;
             margin-top: 50px;
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .footer p {
             font-size: 16pt;
-            color: #212121;
+            color: #000000;
+            font-family: 'Times New Roman', serif;
             margin: 8px 0;
         }
 
         .footer .version {
             font-weight: bold;
-            color: #003366;
-        }
-
-        .quick-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .quick-link {
-            font-size: 16pt;
-            color: #0066CC;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            transition: background-color 0.2s;
-        }
-
-        .quick-link:hover {
-            background-color: #E3F2FD;
+            color: #B71C1C;
         }
 
         @media (max-width: 768px) {
             .button-grid {
+                grid-template-columns: 1fr;
+            }
+            .glossary-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -197,75 +230,143 @@
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
         <div class="header">
             <h1>METRO TV & APPLIANCES</h1>
             <p>Technician Service Portal</p>
         </div>
 
+        <!-- Info Banner -->
         <div class="info-banner">
-            <p><strong>Welcome!</strong> Select a service below to get started. All links open in new windows.</p>
+            <p><strong>Welcome!</strong> Select a service below to get started. All links open in new windows. Use the glossary to quickly navigate to any platform.</p>
         </div>
 
-        <div class="card">
-            <h2 class="section-title">Service Management Systems</h2>
-            <div class="button-grid">
-                <button class="service-button" onclick="window.open('https://www.servicepower.com', '_blank')">
+        <!-- Glossary/Index -->
+        <div class="glossary-card">
+            <h2 class="glossary-title">Platform Glossary & Quick Navigation</h2>
+
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <a href="#servicepower" class="glossary-link" onclick="highlightSection('servicepower'); return true;">ServicePower</a>
+                    <p class="glossary-description">Primary service ticket management system. Used for scheduling, dispatching, and tracking all service calls from major appliance manufacturers and retailers.</p>
+                </div>
+
+                <div class="glossary-item">
+                    <a href="#newleaf" class="glossary-link" onclick="highlightSection('newleaf'); return true;">New Leaf</a>
+                    <p class="glossary-description">Extended warranty service platform. Manages warranty claims, service requests, and customer information for extended protection plans.</p>
+                </div>
+
+                <div class="glossary-item">
+                    <a href="#samsung" class="glossary-link" onclick="highlightSection('samsung'); return true;">Samsung GSPN</a>
+                    <p class="glossary-description">Samsung Global Service Partner Network portal. Used for Samsung-specific service tickets, parts ordering, and warranty claim submissions.</p>
+                </div>
+
+                <div class="glossary-item">
+                    <a href="#ge-parts" class="glossary-link" onclick="highlightSection('ge-parts'); return true;">GE Parts Ordering</a>
+                    <p class="glossary-description">GE Appliances official parts ordering system. Order genuine GE replacement parts, check inventory availability, and track shipments.</p>
+                </div>
+
+                <div class="glossary-item">
+                    <a href="#marcone" class="glossary-link" onclick="highlightSection('marcone'); return true;">Marcone</a>
+                    <p class="glossary-description">Multi-brand appliance parts supplier. Provides OEM and aftermarket parts for all major appliance brands with same-day pickup options at local branches.</p>
+                </div>
+
+                <div class="glossary-item">
+                    <a href="#encompass" class="glossary-link" onclick="highlightSection('encompass'); return true;">Encompass Supply Chain</a>
+                    <p class="glossary-description">Comprehensive parts ordering platform for multiple appliance brands. Order parts, view schematics, check cross-references, and manage your account.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Platforms Section -->
+        <div class="section-card" id="platforms-section">
+            <h2 class="section-title">PLATFORMS</h2>
+
+            <div id="servicepower" class="button-grid" style="margin-bottom: 40px;">
+                <button class="service-button" onclick="window.open('https://hub.servicepower.com/', '_blank')">
                     ServicePower
                 </button>
-                <button class="service-button" onclick="window.open('https://www.servicebench.com', '_blank')">
-                    ServiceBench
-                </button>
-                <button class="service-button" onclick="window.open('https://www.newleafsp.com', '_blank')">
+            </div>
+
+            <div id="newleaf" class="button-grid" style="margin-bottom: 40px;">
+                <button class="service-button" onclick="window.open('https://newleaf-crm.csgfsm.com/', '_blank')">
                     New Leaf
                 </button>
-                <button class="service-button" onclick="window.open('https://www.samsung.com/us/support/', '_blank')">
-                    Samsung Support
+            </div>
+
+            <div id="samsung" class="button-grid">
+                <button class="service-button" onclick="window.open('https://gspn3.samsungcsportal.com/index.jsp', '_blank')">
+                    Samsung GSPN
                 </button>
             </div>
         </div>
 
-        <div class="card">
-            <h2 class="section-title">Parts & Ordering</h2>
-            <div class="button-grid">
-                <button class="service-button success" onclick="alert('GE Appliance Parts ordering system coming soon. Contact supervisor for current ordering process.')">
-                    GE Appliance Ordering
+        <!-- Parts Section -->
+        <div class="section-card" id="parts-section">
+            <h2 class="section-title">PARTS</h2>
+
+            <div id="ge-parts" class="button-grid" style="margin-bottom: 40px;">
+                <button class="service-button" onclick="window.open('https://geappliancescustomernet.com/login', '_blank')">
+                    GE Parts Ordering
                 </button>
-                <button class="service-button secondary" onclick="alert('Parts lookup system coming soon.')">
-                    Parts Lookup
+            </div>
+
+            <div id="marcone" class="button-grid" style="margin-bottom: 40px;">
+                <button class="service-button" onclick="window.open('https://www.marcone.com/', '_blank')">
+                    Marcone
                 </button>
-                <button class="service-button secondary" onclick="alert('Inventory management coming soon.')">
-                    Inventory Management
+            </div>
+
+            <div id="encompass" class="button-grid">
+                <button class="service-button" onclick="window.open('https://www.encompass.com/', '_blank')">
+                    Encompass Supply Chain
                 </button>
             </div>
         </div>
 
-        <div class="card">
-            <h2 class="section-title">Claims & Administration</h2>
+        <!-- Claims Section -->
+        <div class="section-card" id="claims-section">
+            <h2 class="section-title">CLAIMS</h2>
             <div class="button-grid">
-                <button class="service-button warning" onclick="alert('Claims portal coming soon. Please use current claims process.')">
+                <button class="service-button secondary" onclick="alert('Claims portal coming soon. Please use current claims submission process through ServicePower or contact your supervisor.')">
                     Submit Claims
                 </button>
-                <button class="service-button secondary" onclick="alert('Timesheet system coming soon.')">
-                    Timesheets
-                </button>
-                <button class="service-button secondary" onclick="alert('Schedule viewer coming soon.')">
-                    My Schedule
-                </button>
-                <button class="service-button secondary" onclick="alert('Documentation portal coming soon.')">
-                    Documentation
+                <button class="service-button secondary" onclick="alert('Warranty lookup system coming soon.')">
+                    Warranty Lookup
                 </button>
             </div>
         </div>
 
+        <!-- Footer -->
         <div class="footer">
-            <p class="version">Metro TV & Appliances Service Portal v1.0</p>
+            <p class="version">Metro TV & Appliances Service Portal v1.1</p>
             <p>Last Updated: December 2024</p>
-            <div class="quick-links">
-                <a href="#" class="quick-link" onclick="alert('Help documentation coming soon.'); return false;">Help & Support</a>
-                <a href="#" class="quick-link" onclick="alert('Contact your supervisor for assistance.'); return false;">Contact Supervisor</a>
-                <a href="#" class="quick-link" onclick="alert('Training materials coming soon.'); return false;">Training Resources</a>
-            </div>
+            <p style="font-size: 14pt; margin-top: 15px;">For assistance, contact your supervisor or IT support.</p>
         </div>
     </div>
+
+    <script>
+        function highlightSection(sectionId) {
+            // Remove highlight from all sections
+            document.querySelectorAll('.section-card').forEach(card => {
+                card.classList.remove('highlight');
+            });
+
+            // Find the parent section card of the clicked item
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const parentCard = element.closest('.section-card');
+                if (parentCard) {
+                    // Add highlight animation
+                    parentCard.classList.add('highlight');
+
+                    // Remove highlight after animation completes
+                    setTimeout(() => {
+                        parentCard.classList.remove('highlight');
+                    }, 2000);
+                }
+            }
+        }
+    </script>
 </body>
 </html>
